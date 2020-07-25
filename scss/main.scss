@@ -26,9 +26,7 @@ h4 {
 }
 #header {
   background: linear-gradient(#fff1f4, #ffffff);
-  height: 100vh;
   width: 100vw;
-  // position: relative;
   .hexagon {
     width: 12.5rem;
     height: 3.4rem;
@@ -56,7 +54,10 @@ h4 {
   }
   #nav-bar {
     // margin-top: 1.5rem;
-    padding: 1rem 15rem;
+    // padding: 1rem 15rem;
+    // background-color: darkgreen;
+    margin: auto;
+    width: 75%;
     display: flex;
     justify-content: space-between;
     .logo {
@@ -111,10 +112,8 @@ h4 {
   #header-content {
     position: relative;
     display: flex;
-
     // background-color: green;
     padding-bottom: 2rem;
-
     .text {
       display: flex;
       flex-direction: column;
@@ -161,7 +160,6 @@ h4 {
   display: flex;
   width: 100vw;
   height: 80vh;
-  // background-color: yellow;
   .text {
     // background-color: blue;
     width: 50%;
@@ -356,6 +354,8 @@ h4 {
   justify-content: center;
   align-items: center;
   padding-top: 2rem;
+  position: relative;
+  // background-color: yellowgreen;
   .intro {
     text-align: center;
     width: 40%;
@@ -408,6 +408,7 @@ h4 {
             padding: 0.3rem;
             border-radius: 50%;
             background-color: #ffceb0;
+            width: 75px;
             // background-color: yellowgreen;
           }
         }
@@ -431,5 +432,225 @@ h4 {
         // background-color: yellowgreen;
       }
     }
+  }
+  .virus-logo-green {
+    position: absolute;
+    left: 0;
+    top: 30%;
+  }
+  .virus-logo-green-small {
+    position: absolute;
+    bottom: 20%;
+    right: 0;
+  }
+  .virus-logo-prevention {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
+#reporting {
+  position: relative;
+  background: linear-gradient(
+    360deg,
+    rgba(255, 241, 241, 0.5) 0%,
+    rgba(255, 241, 241, 0) 108.69%
+  );
+  #live-report {
+    // background: linear-gradient(#ffff 0%, #FFF1F1 100%);
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    padding-top: 2rem;
+    position: relative;
+    .map {
+      position: relative;
+      .map-zoom {
+        box-shadow: 0 0 0.6rem 0.1rem #ffeeee;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        padding: 1rem 0;
+        position: absolute;
+        left: 2rem;
+        top: 0;
+        color: $medium-color;
+        .fa-caret-up {
+          color: $main-color;
+        }
+        .fa-caret-up,
+        .fa-caret-down {
+          font-size: 1.5rem;
+        }
+      }
+      .search {
+        box-shadow: 0 0 0.6rem 0.1rem #ffeeee;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: #fff;
+        padding: 0.7rem;
+      }
+    }
+    .report {
+      box-shadow: 0 0 1rem 0.1rem #ffeeee;
+      background-color: #fff;
+      border-radius: 0.2rem;
+      margin: 0 1rem;
+      padding: 3rem 1.5rem;
+      td,
+      th {
+        padding: 0.5rem;
+        font-size: 1rem;
+        color: $heading-color;
+        font-weight: 600;
+      }
+      th {
+        font-size: 1.5rem;
+        font-weight: bolder;
+        text-transform: capitalize;
+        text-align: left;
+      }
+      .fa-caret-up {
+        color: $main-color;
+      }
+      .fa-caret-down {
+        color: $heading-color;
+      }
+      .pagination {
+        // background-color: #fff;
+        text-align: right;
+        .arrows {
+          padding: 0.5rem;
+          box-shadow: 0 0 0.6rem 0.1rem #ffeeee;
+          .arrow {
+            padding: 0.3rem;
+            font-weight: bolder;
+            &:first-child {
+              color: $medium-color;
+            }
+            &:first-child::after {
+              content: '';
+              border-right: 0.1rem solid $medium-color;
+              padding-left: 0.8rem;
+              opacity: 0.3;
+            }
+            &:last-child {
+              color: $main-color;
+            }
+          }
+        }
+      }
+      .count {
+        padding-left: 5rem;
+      }
+    }
+  }
+  .queries {
+    // background: green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    line-height: 1.7rem;
+    padding: 2rem 0;
+    h1 {
+      line-height: 2.7rem;
+      color: $heading-color;
+      font-size: 2rem;
+    }
+    .input-group {
+      background-color: #fff;
+      margin-top: 2rem;
+      padding: 1rem 1rem;
+      width: 30%;
+      border-radius: 3rem;
+      display: flex;
+      justify-content: space-between;
+      box-shadow: 0 0 1rem 0.1rem #ffeeee;
+      input[type='text'] {
+        padding: 1rem 3rem 1rem 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        outline: none;
+      }
+      button {
+        background-color: $main-color;
+        cursor: pointer;
+        padding: 0 3rem;
+        border: none;
+        color: #fff;
+        border-radius: 3rem;
+        transition: all 0.5s;
+        &:hover {
+          border: 0.1rem solid $main-color;
+          color: $main-color;
+          background-color: #fff;
+        }
+      }
+    }
+  }
+  footer#footer {
+    // background-color: green;
+    margin-top: 2rem;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    div.contact-info {
+      width: 75%;
+      // background-color: coral;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .logo {
+        cursor: pointer;
+        // color: blue;
+      }
+      ul {
+        display: flex;
+        // background-color: blue;
+        li {
+          padding: 2.5rem 1.5rem;
+        }
+        a {
+          text-decoration: none;
+          transition: border-color 0.5s;
+          font-weight: 600;
+          position: relative;
+          &.link:hover {
+            border-color: $main-color;
+            color: $main-color;
+          }
+        }
+      }
+      .social-icons {
+        img {
+          padding: 1rem;
+        }
+        img:last-child {
+          padding-right: 0;
+        }
+      }
+    }
+    div.copy-right {
+      padding: 1rem 0;
+      color: #415e56;
+    }
+  }
+  .virus-half {
+    position: absolute;
+    right: 0;
+    bottom: 5%;
+  }
+  .virus-full {
+    position: absolute;
+    right: 5%;
+    bottom: 30%;
   }
 }
