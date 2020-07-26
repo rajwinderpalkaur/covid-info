@@ -1,11 +1,136 @@
+@media (max-width: 963px) {
+  body {
+    font-size: 63.5%; }
+    body h1 {
+      font-size: 1rem; }
+  #header #nav-bar {
+    flex-direction: column;
+    align-items: center; }
+  #header #header-content .text {
+    padding: 1rem !important; }
+  #prevention, #symptoms, #contagion {
+    padding: 0 0 !important; }
+  #about-corona .text {
+    padding-right: 2rem !important; }
+  #about-corona .img {
+    padding-left: 2rem !important; }
+  #reporting footer#footer div.contact-info {
+    flex-wrap: wrap; }
+    #reporting footer#footer div.contact-info .social-icons {
+      margin: auto; } }
+
+@media (max-width: 768px) {
+  #reporting #live-report {
+    flex-direction: column;
+    align-items: center !important;
+    width: 90% !important; }
+    #reporting #live-report .report {
+      margin-top: 2rem !important; }
+      #reporting #live-report .report table {
+        border-spacing: 0;
+        border-collapse: collapse; }
+      #reporting #live-report .report td,
+      #reporting #live-report .report th {
+        padding: 0.3rem !important;
+        margin: 0 !important; }
+  #reporting footer#footer div.contact-info {
+    flex-direction: column; } }
+
+@media (max-width: 500px) {
+  #header #nav-bar {
+    padding: 2rem 3rem !important; }
+    #header #nav-bar ul li {
+      padding: 2rem 0.3rem !important; }
+  #header #header-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    #header #header-content::after {
+      content: '';
+      border: 0.1rem dotted #ccc;
+      width: 100px; }
+    #header #header-content .text {
+      max-width: 100%;
+      right: 0 !important;
+      align-items: center !important;
+      text-align: justify !important; }
+      #header #header-content .text h1 {
+        text-align: center; }
+    #header #header-content .img {
+      width: auto; }
+      #header #header-content .img img {
+        max-width: 100%;
+        display: none; }
+  #about-corona {
+    flex-direction: column; }
+    #about-corona::after {
+      content: '';
+      border: 0.1rem dotted #ccc;
+      width: 100px; }
+    #about-corona .text {
+      width: 100% !important;
+      align-items: center !important;
+      text-align: justify !important;
+      padding: 1rem !important; }
+    #about-corona .img {
+      max-width: 100%; }
+      #about-corona .img img {
+        max-width: 100%;
+        display: none; }
+  #contagion::after {
+    content: '';
+    border: 0.1rem dotted #ccc;
+    width: 100px; }
+  #contagion .intro {
+    text-align: center;
+    width: 100% !important; }
+  #contagion .cards {
+    flex-direction: column; }
+    #contagion .cards .card {
+      max-width: 100% !important; }
+  #symptoms::after {
+    content: '';
+    border: 0.1rem dotted #ccc;
+    margin-top: 1rem;
+    width: 100px; }
+  #symptoms .intro {
+    max-width: 100% !important; }
+  #prevention::after {
+    content: '';
+    border: 0.1rem dotted #ccc;
+    margin-top: 1rem;
+    width: 100px; }
+  #prevention .intro {
+    width: 100% !important; }
+  #prevention .horizontal-cards .card {
+    width: 100% !important;
+    flex-direction: column-reverse; }
+    #prevention .horizontal-cards .card:nth-child(even) {
+      flex-direction: column-reverse !important; }
+    #prevention .horizontal-cards .card .symptoms {
+      width: 100% !important; }
+  #prevention .virus-logo-green {
+    opacity: 0.3; }
+  #prevention .virus-logo-green-small {
+    opacity: 0.3; }
+  #prevention .virus-logo-prevention {
+    opacity: 0.3; }
+  #reporting .queries .input-group {
+    width: 80% !important; }
+  #reporting footer div.contact-info ul li {
+    padding: 2.5rem 0.5rem !important; }
+  #reporting .fa-caret-up,
+  #reporting .fa-caret-down {
+    font-size: 0.5rem !important; } }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
 
 body {
-  font-family: 'Inter', sans-serif;
-  overflow-x: hidden; }
+  font-family: 'Inter', sans-serif; }
 
 a {
   text-decoration: none;
@@ -20,11 +145,14 @@ h1 {
 h2,
 h3,
 h4 {
-  color: #035755; }
+  color: #035755;
+  line-height: 2.7rem; }
+
+p {
+  padding-top: 1.5rem; }
 
 #header {
-  background: linear-gradient(#fff1f4, #ffffff);
-  width: 100vw; }
+  background: linear-gradient(#fff1f4, #ffffff); }
   #header .hexagon {
     width: 12.5rem;
     height: 3.4rem;
@@ -45,9 +173,11 @@ h4 {
       border-right: 6.25rem solid transparent;
       border-bottom: 1rem solid #fff; }
   #header #nav-bar {
-    margin: auto;
-    width: 75%;
+    margin-top: 1.5rem;
+    padding: 2rem 10rem;
     display: flex;
+    max-width: auto;
+    margin: auto;
     justify-content: space-between; }
     #header #nav-bar .logo {
       margin-top: 0.5rem;
@@ -88,26 +218,23 @@ h4 {
         #header #nav-bar ul a.current {
           border-color: #fa5652; }
   #header #header-content {
-    position: relative;
     display: flex;
-    padding-bottom: 2rem; }
+    justify-content: center;
+    align-items: center; }
     #header #header-content .text {
       display: flex;
       flex-direction: column;
       align-items: start;
       justify-content: center;
-      text-align: justify;
-      margin: 10rem 15rem;
-      padding: 5rem 5rem 5rem 0;
-      width: 40%; }
+      width: auto;
+      padding: 1rem 1rem 1rem 10rem;
+      position: relative;
+      right: -3rem; }
       #header #header-content .text h1 {
-        line-height: 2.7rem;
         color: #035755; }
       #header #header-content .text h2 {
-        line-height: 2.7rem;
         color: #fa5652; }
       #header #header-content .text p {
-        padding-top: 1.5rem;
         line-height: 1.7rem; }
       #header #header-content .text a {
         margin-top: 3rem;
@@ -121,31 +248,29 @@ h4 {
           background-color: #fff;
           color: #fa5652; }
     #header #header-content .img {
-      position: absolute;
-      right: 0; }
+      width: auto; }
+      #header #header-content .img img {
+        max-width: 100%; }
 
 #about-corona {
   display: flex;
-  width: 100vw;
-  height: 80vh; }
+  align-items: center;
+  max-width: auto; }
   #about-corona .text {
+    padding: 2rem 3rem;
     width: 50%;
     display: flex;
-    height: 100%;
     flex-direction: column;
     align-items: end;
     justify-content: center;
-    padding: 0 15rem 0 5rem;
     text-align: justify;
-    position: relative; }
+    position: relative;
+    padding-right: 10rem; }
     #about-corona .text h1 {
-      line-height: 2.7rem;
       color: #035755; }
     #about-corona .text h2 {
-      line-height: 2.7rem;
       color: #fa5652; }
     #about-corona .text p {
-      padding-top: 1.5rem;
       line-height: 1.7rem;
       text-transform: capitalize; }
     #about-corona .text a {
@@ -162,54 +287,55 @@ h4 {
     #about-corona .text img.virus-logo-big {
       position: absolute;
       right: 0;
-      bottom: 0; }
+      bottom: -10rem;
+      z-index: -10; }
     #about-corona .text img.virus-logo-small {
       position: absolute;
-      right: 5rem;
-      bottom: -5rem; }
+      right: 1rem;
+      bottom: -15rem;
+      z-index: -10; }
   #about-corona .img {
-    width: 50%; }
+    width: 50%;
+    padding-left: 10rem; }
     #about-corona .img img {
-      height: 100%;
-      padding-left: 10rem;
-      padding-right: 0rem; }
+      max-width: 100%; }
 
 #contagion {
+  max-width: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  padding: 2rem 10rem; }
   #contagion .intro {
     text-align: center;
-    width: 40%;
+    width: 50%;
     padding: 1rem;
     line-height: 1.7rem; }
     #contagion .intro h1 {
-      line-height: 2.7rem;
       color: #035755; }
     #contagion .intro h2 {
-      line-height: 2.7rem;
       color: #fa5652; }
     #contagion .intro p {
-      padding-top: 1.5rem;
       line-height: 1.7rem;
       text-transform: capitalize; }
   #contagion .cards {
+    padding: 2rem 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
-    margin: 3rem 15rem;
-    position: relative;
-    z-index: 0; }
+    max-width: 100%;
+    z-index: 0;
+    position: relative; }
     #contagion .cards img.virus-logo {
       position: absolute;
       z-index: -1;
-      left: -10%;
-      bottom: 0; }
+      left: 0.5%;
+      bottom: 10%; }
     #contagion .cards .card {
-      width: 40%;
-      height: 500px;
+      max-width: 28%;
+      max-height: 500px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -221,17 +347,16 @@ h4 {
       box-shadow: 0 0 1.5rem 0.05rem #f1f1f1;
       transition: all 0.5s; }
       #contagion .cards .card img {
-        height: 50%; }
+        height: 50%;
+        max-width: 100%; }
       #contagion .cards .card .description {
         height: 40%;
         text-align: center;
         padding-top: 4rem;
         line-height: 1.7rem; }
         #contagion .cards .card .description h2 {
-          line-height: 2.7rem;
           color: #035755; }
         #contagion .cards .card .description p {
-          padding-top: 1.5rem;
           line-height: 1.7rem;
           text-transform: capitalize; }
       #contagion .cards .card:nth-child(2) {
@@ -248,37 +373,43 @@ h4 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 2rem 10rem;
   position: relative; }
   #symptoms .intro {
     text-align: center;
-    width: 40%;
+    max-width: 40%;
     padding: 1rem;
     line-height: 1.7rem; }
     #symptoms .intro h1 {
-      line-height: 2.7rem;
       color: #035755; }
     #symptoms .intro h2 {
-      line-height: 2.7rem;
       color: #fa5652; }
     #symptoms .intro p {
-      padding-top: 1.5rem;
       line-height: 1.7rem;
       text-transform: capitalize; }
-  #symptoms img:first-child {
-    position: absolute;
-    bottom: 15rem;
-    left: 2rem; }
-  #symptoms img:last-child {
-    position: absolute;
-    bottom: 0;
-    right: 2rem; }
+  #symptoms .img-symptoms {
+    display: flex;
+    justify-content: center;
+    margin: 0 3rem; }
+    #symptoms .img-symptoms img:first-child {
+      position: absolute;
+      bottom: 15rem;
+      left: 2rem;
+      z-index: -10; }
+    #symptoms .img-symptoms img:nth-child(2) {
+      max-width: 100%; }
+    #symptoms .img-symptoms img:last-child {
+      position: absolute;
+      bottom: 0;
+      right: 2rem;
+      z-index: -10; }
 
 #prevention {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 2rem;
+  padding: 2rem 10rem;
   position: relative; }
   #prevention .intro {
     text-align: center;
@@ -286,13 +417,10 @@ h4 {
     padding: 1rem;
     line-height: 1.7rem; }
     #prevention .intro h1 {
-      line-height: 2.7rem;
       color: #035755; }
     #prevention .intro h2 {
-      line-height: 2.7rem;
       color: #fa5652; }
     #prevention .intro p {
-      padding-top: 1.5rem;
       line-height: 1.7rem;
       text-transform: capitalize; }
   #prevention .horizontal-cards {
@@ -301,7 +429,7 @@ h4 {
     flex-direction: column;
     align-items: center; }
     #prevention .horizontal-cards .card {
-      width: 75%;
+      max-width: 100%;
       padding: 0 2rem;
       margin: 1rem;
       display: flex;
@@ -330,7 +458,6 @@ h4 {
           #prevention .horizontal-cards .card .symptoms .description h2 {
             color: #035755; }
           #prevention .horizontal-cards .card .symptoms .description p {
-            padding-top: 1.5rem;
             line-height: 1.9rem;
             text-transform: capitalize; }
       #prevention .horizontal-cards .card img {
@@ -338,26 +465,31 @@ h4 {
   #prevention .virus-logo-green {
     position: absolute;
     left: 0;
-    top: 30%; }
+    top: 30%;
+    z-index: -10; }
   #prevention .virus-logo-green-small {
     position: absolute;
     bottom: 20%;
-    right: 0; }
+    right: 0;
+    z-index: -10; }
   #prevention .virus-logo-prevention {
     position: absolute;
     right: 0;
-    bottom: 0; }
+    bottom: 0;
+    z-index: -10; }
 
 #reporting {
   position: relative;
   background: linear-gradient(360deg, rgba(255, 241, 241, 0.5) 0%, rgba(255, 241, 241, 0) 108.69%); }
   #reporting #live-report {
     display: flex;
-    justify-content: center;
-    padding-top: 2rem;
-    position: relative; }
+    justify-content: center; }
     #reporting #live-report .map {
-      position: relative; }
+      position: relative;
+      display: flex;
+      justify-content: center; }
+      #reporting #live-report .map img {
+        max-width: 90%; }
       #reporting #live-report .map .map-zoom {
         box-shadow: 0 0 0.6rem 0.1rem #ffeeee;
         background-color: #fff;
@@ -366,7 +498,7 @@ h4 {
         justify-content: center;
         align-items: center;
         width: 50px;
-        padding: 1rem 0;
+        padding: 0.5rem 0;
         position: absolute;
         left: 2rem;
         top: 0;
@@ -431,14 +563,13 @@ h4 {
     line-height: 1.7rem;
     padding: 2rem 0; }
     #reporting .queries h1 {
-      line-height: 2.7rem;
       color: #035755;
       font-size: 2rem; }
     #reporting .queries .input-group {
       background-color: #fff;
       margin-top: 2rem;
       padding: 1rem 1rem;
-      width: 30%;
+      width: 50%;
       border-radius: 3rem;
       display: flex;
       justify-content: space-between;
@@ -462,15 +593,14 @@ h4 {
           color: #fa5652;
           background-color: #fff; }
   #reporting footer#footer {
-    margin-top: 2rem;
-    padding: 1rem 0;
+    margin: 2rem 2rem 0 2rem;
     display: flex;
     flex-direction: column;
     align-items: center; }
     #reporting footer#footer div.contact-info {
-      width: 75%;
+      width: 100%;
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       align-items: center; }
       #reporting footer#footer div.contact-info .logo {
         cursor: pointer; }
@@ -496,8 +626,10 @@ h4 {
   #reporting .virus-half {
     position: absolute;
     right: 0;
-    bottom: 5%; }
+    bottom: 5%;
+    z-index: -10; }
   #reporting .virus-full {
     position: absolute;
     right: 5%;
-    bottom: 30%; }
+    bottom: 30%;
+    z-index: -10; }

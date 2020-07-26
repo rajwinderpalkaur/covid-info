@@ -1,4 +1,5 @@
 @import 'config';
+@import 'media';
 
 * {
   margin: 0;
@@ -7,7 +8,6 @@
 }
 body {
   font-family: 'Inter', sans-serif;
-  overflow-x: hidden;
 }
 a {
   text-decoration: none;
@@ -23,10 +23,13 @@ h2,
 h3,
 h4 {
   color: $heading-color;
+  line-height: 2.7rem;
+}
+p {
+  padding-top: 1.5rem;
 }
 #header {
   background: linear-gradient(#fff1f4, #ffffff);
-  width: 100vw;
   .hexagon {
     width: 12.5rem;
     height: 3.4rem;
@@ -53,12 +56,11 @@ h4 {
     }
   }
   #nav-bar {
-    // margin-top: 1.5rem;
-    // padding: 1rem 15rem;
-    // background-color: darkgreen;
-    margin: auto;
-    width: 75%;
+    margin-top: 1.5rem;
+    padding: 2rem 10rem;
     display: flex;
+    max-width: auto;
+    margin: auto;
     justify-content: space-between;
     .logo {
       margin-top: 0.5rem;
@@ -110,30 +112,25 @@ h4 {
     }
   }
   #header-content {
-    position: relative;
     display: flex;
-    // background-color: green;
-    padding-bottom: 2rem;
+    justify-content: center;
+    align-items: center;
     .text {
       display: flex;
       flex-direction: column;
       align-items: start;
       justify-content: center;
-      // background-color: yellow;
-      text-align: justify;
-      margin: 10rem 15rem;
-      padding: 5rem 5rem 5rem 0;
-      width: 40%;
+      width: auto;
+      padding: 1rem 1rem 1rem 10rem;
+      position: relative;
+      right: -3rem;
       h1 {
-        line-height: 2.7rem;
         color: $heading-color;
       }
       h2 {
-        line-height: 2.7rem;
         color: $main-color;
       }
       p {
-        padding-top: 1.5rem;
         line-height: 1.7rem;
       }
       a {
@@ -151,36 +148,36 @@ h4 {
       }
     }
     .img {
-      position: absolute;
-      right: 0;
+      width: auto;
+      img {
+        max-width: 100%;
+      }
     }
   }
 }
 #about-corona {
   display: flex;
-  width: 100vw;
-  height: 80vh;
+  align-items: center;
+  max-width: auto;
+  // margin: 2rem 10rem;
   .text {
-    // background-color: blue;
+    padding: 2rem 3rem;
     width: 50%;
     display: flex;
-    height: 100%;
     flex-direction: column;
     align-items: end;
     justify-content: center;
-    padding: 0 15rem 0 5rem;
     text-align: justify;
     position: relative;
+    padding-right: 10rem;
+
     h1 {
-      line-height: 2.7rem;
       color: $heading-color;
     }
     h2 {
-      line-height: 2.7rem;
       color: $main-color;
     }
     p {
-      padding-top: 1.5rem;
       line-height: 1.7rem;
       text-transform: capitalize;
     }
@@ -200,71 +197,66 @@ h4 {
     img.virus-logo-big {
       position: absolute;
       right: 0;
-      bottom: 0;
+      bottom: -10rem;
+      z-index: -10;
     }
     img.virus-logo-small {
       position: absolute;
-      right: 5rem;
-      bottom: -5rem;
+      right: 1rem;
+      bottom: -15rem;
+      z-index: -10;
     }
   }
   .img {
     width: 50%;
+    padding-left: 10rem;
     img {
-      // background-color: yellowgreen;
-      height: 100%;
-      padding-left: 10rem;
-      padding-right: 0rem;
+      max-width: 100%;
     }
   }
 }
 
 #contagion {
-  // background-color: coral;
+  max-width: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 2rem 10rem;
   .intro {
     text-align: center;
-    width: 40%;
+    width: 50%;
     padding: 1rem;
-    // background-color: darkorchid;
     line-height: 1.7rem;
     h1 {
-      line-height: 2.7rem;
       color: $heading-color;
     }
     h2 {
-      line-height: 2.7rem;
       color: $main-color;
     }
     p {
-      padding-top: 1.5rem;
       line-height: 1.7rem;
       text-transform: capitalize;
     }
   }
   .cards {
-    // background-color: darkcyan;
-    // background: linear-gradient(#f4f4f4, #ffffff);
-    // padding: 0 2rem;
+    padding: 2rem 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
-    margin: 3rem 15rem;
-    position: relative;
+    max-width: 100%;
     z-index: 0;
+    position: relative;
     img.virus-logo {
       position: absolute;
       z-index: -1;
-      left: -10%;
-      bottom: 0;
+      left: 0.5%;
+      bottom: 10%;
     }
     .card {
-      width: 40%;
-      height: 500px;
+      max-width: 28%;
+      max-height: 500px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -277,6 +269,7 @@ h4 {
       transition: all 0.5s;
       img {
         height: 50%;
+        max-width: 100%;
       }
       .description {
         height: 40%;
@@ -284,11 +277,9 @@ h4 {
         padding-top: 4rem;
         line-height: 1.7rem;
         h2 {
-          line-height: 2.7rem;
           color: $heading-color;
         }
         p {
-          padding-top: 1.5rem;
           line-height: 1.7rem;
           text-transform: capitalize;
         }
@@ -308,70 +299,68 @@ h4 {
   }
 }
 #symptoms {
-  // background-color: green;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 2rem 10rem;
   position: relative;
   .intro {
     text-align: center;
-    width: 40%;
+    max-width: 40%;
     padding: 1rem;
-    // background-color: darkorchid;
     line-height: 1.7rem;
     h1 {
-      line-height: 2.7rem;
       color: $heading-color;
     }
     h2 {
-      line-height: 2.7rem;
       color: $main-color;
     }
     p {
-      padding-top: 1.5rem;
       line-height: 1.7rem;
       text-transform: capitalize;
     }
   }
-  img:first-child {
-    position: absolute;
-    // background-color: darkred;
-    bottom: 15rem;
-    left: 2rem;
-  }
-  img:last-child {
-    position: absolute;
-    // background-color: darkred;
-    bottom: 0;
-    right: 2rem;
+  .img-symptoms {
+    display: flex;
+    justify-content: center;
+    margin: 0 3rem;
+    img:first-child {
+      position: absolute;
+      bottom: 15rem;
+      left: 2rem;
+      z-index: -10;
+    }
+    img:nth-child(2) {
+      max-width: 100%;
+    }
+    img:last-child {
+      position: absolute;
+      bottom: 0;
+      right: 2rem;
+      z-index: -10;
+    }
   }
 }
 #prevention {
-  // background-color: coral;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 2rem;
+  padding: 2rem 10rem;
   position: relative;
-  // background-color: yellowgreen;
   .intro {
     text-align: center;
     width: 40%;
     padding: 1rem;
-    // background-color: darkorchid;
     line-height: 1.7rem;
     h1 {
-      line-height: 2.7rem;
       color: $heading-color;
     }
     h2 {
-      line-height: 2.7rem;
       color: $main-color;
     }
     p {
-      padding-top: 1.5rem;
       line-height: 1.7rem;
       text-transform: capitalize;
     }
@@ -381,16 +370,13 @@ h4 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    // background: green;
     .card {
-      width: 75%;
+      max-width: 100%;
       padding: 0 2rem;
       margin: 1rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      // background-color: yellow;
-      // border: 1px solid violet;
       &:nth-child(even) {
         flex-direction: row-reverse;
       }
@@ -409,19 +395,15 @@ h4 {
             border-radius: 50%;
             background-color: #ffceb0;
             width: 75px;
-            // background-color: yellowgreen;
           }
         }
         .description {
           width: 100%;
           text-align: justify;
-          // background-color: yellowgreen;
           h2 {
-            // line-height: 2.7rem;
             color: $heading-color;
           }
           p {
-            padding-top: 1.5rem;
             line-height: 1.9rem;
             text-transform: capitalize;
           }
@@ -429,7 +411,6 @@ h4 {
       }
       img {
         width: 30%;
-        // background-color: yellowgreen;
       }
     }
   }
@@ -437,16 +418,19 @@ h4 {
     position: absolute;
     left: 0;
     top: 30%;
+    z-index: -10;
   }
   .virus-logo-green-small {
     position: absolute;
     bottom: 20%;
     right: 0;
+    z-index: -10;
   }
   .virus-logo-prevention {
     position: absolute;
     right: 0;
     bottom: 0;
+    z-index: -10;
   }
 }
 #reporting {
@@ -457,14 +441,15 @@ h4 {
     rgba(255, 241, 241, 0) 108.69%
   );
   #live-report {
-    // background: linear-gradient(#ffff 0%, #FFF1F1 100%);
     display: flex;
     justify-content: center;
-    // align-items: center;
-    padding-top: 2rem;
-    position: relative;
     .map {
       position: relative;
+      display: flex;
+      justify-content: center;
+      img {
+        max-width: 90%;
+      }
       .map-zoom {
         box-shadow: 0 0 0.6rem 0.1rem #ffeeee;
         background-color: #fff;
@@ -473,7 +458,7 @@ h4 {
         justify-content: center;
         align-items: center;
         width: 50px;
-        padding: 1rem 0;
+        padding: 0.5rem 0;
         position: absolute;
         left: 2rem;
         top: 0;
@@ -521,7 +506,6 @@ h4 {
         color: $heading-color;
       }
       .pagination {
-        // background-color: #fff;
         text-align: right;
         .arrows {
           padding: 0.5rem;
@@ -550,7 +534,6 @@ h4 {
     }
   }
   .queries {
-    // background: green;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -558,7 +541,6 @@ h4 {
     line-height: 1.7rem;
     padding: 2rem 0;
     h1 {
-      line-height: 2.7rem;
       color: $heading-color;
       font-size: 2rem;
     }
@@ -566,7 +548,7 @@ h4 {
       background-color: #fff;
       margin-top: 2rem;
       padding: 1rem 1rem;
-      width: 30%;
+      width: 50%;
       border-radius: 3rem;
       display: flex;
       justify-content: space-between;
@@ -595,26 +577,20 @@ h4 {
     }
   }
   footer#footer {
-    // background-color: green;
-    margin-top: 2rem;
-    padding: 1rem 0;
+    margin: 2rem 2rem 0 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-
     div.contact-info {
-      width: 75%;
-      // background-color: coral;
+      width: 100%;
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       align-items: center;
       .logo {
         cursor: pointer;
-        // color: blue;
       }
       ul {
         display: flex;
-        // background-color: blue;
         li {
           padding: 2.5rem 1.5rem;
         }
@@ -647,10 +623,12 @@ h4 {
     position: absolute;
     right: 0;
     bottom: 5%;
+    z-index: -10;
   }
   .virus-full {
     position: absolute;
     right: 5%;
     bottom: 30%;
+    z-index: -10;
   }
 }

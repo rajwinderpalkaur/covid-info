@@ -1,0 +1,210 @@
+@media (max-width: 963px) {
+  body {
+    font-size: 63.5%;
+    h1 {
+      font-size: 1rem;
+    }
+  }
+  #header {
+    #nav-bar {
+      flex-direction: column;
+      align-items: center;
+    }
+    #header-content {
+      .text {
+        padding: 1rem !important;
+      }
+    }
+  }
+  #prevention, #symptoms, #contagion{
+    padding: 0 0 !important;
+  }
+  #about-corona {
+    .text {
+      padding-right: 2rem !important;
+    }
+    .img {
+      padding-left: 2rem !important;
+    }
+  }
+  #reporting {
+    footer#footer {
+      div.contact-info {
+        flex-wrap: wrap;
+        .social-icons {
+          margin: auto;
+        }
+      }
+    }
+  }
+  
+}
+
+@media (max-width: 768px) {
+  #reporting {
+    #live-report {
+      flex-direction: column;
+      align-items: center !important;
+      width: 90% !important ;
+      .report {
+        margin-top: 2rem !important;
+        table {
+          border-spacing: 0;
+          border-collapse: collapse;
+        }
+        td,
+        th {
+          padding: 0.3rem !important;
+          margin: 0 !important;
+        }
+      }
+    }
+    footer#footer {
+      div.contact-info {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  #header {
+    #nav-bar {
+      padding: 2rem 3rem !important;
+      ul {
+        li {
+          padding: 2rem 0.3rem !important;
+        }
+      }
+    }
+    #header-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      &::after {
+        content: '';
+        border: 0.1rem dotted $medium-color;
+        width: 100px;
+      }
+      .text {
+        max-width: 100%;
+        right: 0 !important;
+        align-items: center !important;
+        text-align: justify !important;
+        h1 {
+          text-align: center;
+        }
+      }
+      .img {
+        width: auto;
+        img {
+          max-width: 100%;
+          display: none;
+        }
+      }
+    }
+  }
+  #about-corona {
+    flex-direction: column;
+    &::after {
+      content: '';
+      border: 0.1rem dotted $medium-color;
+      width: 100px;
+    }
+    .text {
+      width: 100% !important;
+      align-items: center !important;
+      text-align: justify !important;
+      padding: 1rem !important;
+    }
+    .img {
+      max-width: 100%;
+      img {
+        max-width: 100%;
+        display: none;
+      }
+    }
+  }
+
+  #contagion {
+    &::after {
+      content: '';
+      border: 0.1rem dotted $medium-color;
+      width: 100px;
+    }
+    .intro {
+      text-align: center;
+      width: 100% !important;
+    }
+    .cards {
+      flex-direction: column;
+      .card {
+        max-width: 100% !important;
+      }
+    }
+  }
+  #symptoms {
+    &::after {
+      content: '';
+      border: 0.1rem dotted $medium-color;
+      margin-top: 1rem;
+      width: 100px;
+    }
+    .intro {
+      max-width: 100% !important;
+    }
+  }
+  #prevention {
+    &::after {
+      content: '';
+      border: 0.1rem dotted $medium-color;
+      margin-top: 1rem;
+      width: 100px;
+    }
+    .intro {
+      width: 100% !important;
+    }
+    .horizontal-cards {
+      .card {
+        width: 100% !important;
+        flex-direction: column-reverse;
+        &:nth-child(even) {
+          flex-direction: column-reverse !important;
+        }
+        .symptoms {
+          width: 100% !important;
+        }
+      }
+    }
+    .virus-logo-green {
+      opacity: 0.3;
+    }
+    .virus-logo-green-small {
+      opacity: 0.3;
+    }
+    .virus-logo-prevention {
+      opacity: 0.3;
+    }
+  }
+  #reporting {
+    .queries {
+      .input-group {
+        width: 80% !important;
+      }
+    }
+    footer {
+      div.contact-info {
+        ul {
+          li {
+            padding: 2.5rem 0.5rem !important;
+          }
+        }
+      }
+    }
+    .fa-caret-up,
+    .fa-caret-down {
+      font-size: 0.5rem !important;
+    }
+  }
+}
