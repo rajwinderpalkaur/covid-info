@@ -16,7 +16,9 @@
       }
     }
   }
-  #prevention, #symptoms, #contagion{
+  #prevention,
+  #symptoms,
+  #contagion {
     padding: 0 0 !important;
   }
   #about-corona {
@@ -37,12 +39,12 @@
       }
     }
   }
-  
 }
 
 @media (max-width: 768px) {
   #reporting {
     #live-report {
+      margin: auto !important;
       flex-direction: column;
       align-items: center !important;
       width: 90% !important ;
@@ -159,7 +161,7 @@
     &::after {
       content: '';
       border: 0.1rem dotted $medium-color;
-      margin-top: 1rem;
+      margin: 1rem 0;
       width: 100px;
     }
     .intro {
